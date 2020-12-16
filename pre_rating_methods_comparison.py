@@ -19,7 +19,7 @@ for p in learn_puzzles:
 
 for moves_count in per_moves_count:
     per_moves_count[moves_count]["median_rating"] = median(per_moves_count[moves_count]["ratings"])
-#---
+#------------------------------------
 
 def method1(fen, solution):
     return 1500
@@ -32,6 +32,7 @@ def method3(fen, solution):
     return int(predictor.predict_rating(fen, solution))
 
 
+#TODO: Specify the number pf puzzles you want to test from the file test.json
 f = open('test.json')
 puzzles = json.load(f)[0:10]
 
